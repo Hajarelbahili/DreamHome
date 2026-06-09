@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Home</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navOverlay = document.querySelector(".nav-overlay");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      function closeNavigation() {
+        document.body.classList.remove("nav-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = document.body.classList.toggle("nav-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      navOverlay.addEventListener("click", closeNavigation);
+      navLinks.forEach((link) =>
+        link.addEventListener("click", closeNavigation)
+      );
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeNavigation();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="navbar-logo">LeonHome</div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="navbar-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8 8h3.83v2.05h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V23h-4v-7.88c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.16V23h-4V8z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.9 2h3.3l-7.2 8.23L23.5 22h-6.65l-5.2-6.8L5.7 22H2.4l7.7-8.8L2 2h6.82l4.7 6.22L18.9 2zm-1.16 18h1.83L7.83 3.9H5.87L17.74 20z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="navbar-contact">
+            <a href="tel:+212601248616" class="phone-btn">
+              <i class="fa fa-phone icon"></i>
+              <span class="text">+212 601 24 86 16</span>
+            </a>
+          </div>
+        </div>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="nav-overlay"></div>
+
+      <div class="header-container">
+        <div class="header-container-inner">
+          <h1 class="hero-text">
+            <span class="hero-line hero-line-offset">Upgrade your</span>
+            <span class="hero-line">life with smart home</span>
+            <span class="hero-line">technology</span>
+          </h1>
+          <span class="hero-sub">Leon Home</span>
+        </div>
+        <div class="container-static">
+          <div class="stats-list">
+            <p class="stat-card start">
+              <span>5.9K+</span> Successfully delivering innovative projects
+              around the world
+            </p>
+            <p class="stat-card end">
+              <span>10K+</span> Award-winning real estate projects completed
+              globally
+            </p>
+          </div>
+        </div>
+        <div class="container-btn">
+          <!-- From Uiverse.io by Creatlydev -->
+          <button class="button" style="--clr: #fff">
+            <span class="button__icon-wrapper">
+              <svg
+                viewBox="0 0 14 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon-svg"
+                width="10"
+              >
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <svg
+                viewBox="0 0 14 15"
+                fill="none"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon-svg button__icon-svg--copy"
+              >
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </span>
+            DISCOVER MORE
+          </button>
+        </div>
+      </div>
+    </header>
+    <section>
+      <h2>Experience Excellence <br />In Real Estate</h2>
+
+      <div class="about-container">
+        <!-- Colonne gauche -->
+        <div class="about-left">
+          <div class="info-card">
+            <h3>Your Trusted Partner in Finding the Perfect Home</h3>
+            <p>
+              At Luxra Real Estate, we believe that buying or selling a home
+              should be an exciting and stress-free experience.
+            </p>
+
+            <button class="btn-about">About Us</button>
+          </div>
+
+          <div class="partners-card">
+            <h3>Our Partner:</h3>
+
+            <div class="partners-list">
+              <span>
+                <i class="fa fa-google-wallet partner-icon"></i>Paynest</span
+              >
+              <span><i class="fa fa-bolt partner-icon"></i>BoldStaff</span>
+              <span><i class="fa fa-fire partner-icon"></i>Quotient</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centre -->
+        <figure class="about-image">
+          <img src="imgs/S1.png" alt="Luxury villa exterior" />
+        </figure>
+
+        <!-- Colonne droite -->
+        <div class="about-right">
+          <div class="feature-cards">
+            <div class="feature-card">
+              <h3>Expert Guidance</h3>
+              <p>
+                Our experienced agents provide professional advice and
+                personalized support.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Wide Property Selection</h3>
+              <p>
+                From luxury homes to budget-friendly apartments, we have
+                something for everyone.
+              </p>
+            </div>
+          </div>
+          <div class="reviews-card">
+            <h3>Reviews</h3>
+
+            <div class="reviews-content">
+              <div class="reviews-avatars">
+                <div class="review-avatar">
+                  <img class="avatar-img" src="imgs/C1.jpg" alt="Client 1" />
+                </div>
+
+                <div class="review-avatar">
+                  <img class="avatar-img" src="imgs/C7.jpg" alt="Client 2" />
+                </div>
+
+                <div class="review-avatar">
+                  <img class="avatar-img" src="imgs/C3.jpg" alt="Client 3" />
+                </div>
+
+                <div class="review-avatar"><span>+</span></div>
+              </div>
+
+              <div class="reviews-rating">
+                <p>
+                  <strong>4.9</strong><br />
+                  Customer Ratings
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
