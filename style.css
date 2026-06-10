@@ -651,6 +651,64 @@ h2 {
     0 0 50px rgb(255, 255, 255),
     0 0 100px rgb(255, 255, 255);
 }
+.properties {
+  /* background-color: #f7ce88;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 40px;
+}
+.properties h2 {
+  text-align: left;
+  max-width: 500px;
+  letter-spacing: -1px;
+}
+.properties p {
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 0.9;
+}
+.galerie {
+  background-color: #f5b9b9;
+  padding: 48px 60px;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.galerie-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transition:
+    transform 2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1s ease;
+  will-change: transform;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.galerie-image {
+  aspect-ratio: 350/200;
+}
+
+.galerie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.galerie-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+.galerie-info p {
+  font-size: 14px;
+  font-weight: bold;
+}
 @media (max-width: 1286px) {
   .about-container {
     padding: 48px 70px;
@@ -710,6 +768,17 @@ h2 {
   }
   .about-container {
     padding: 48px 25px;
+  }
+  .properties {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+
+    padding: 48px 20px;
+  }
+  .properties p {
+    max-width: 900px;
   }
 }
 
@@ -813,5 +882,17 @@ h2 {
   }
   .team-container {
     padding: 48px 20px;
+  }
+  .team-content h2 {
+    text-align: start;
+    font-size: 45px;
+  }
+  .galerie {
+    height: 350px;
+  }
+
+  .galerie-info p {
+    font-size: 10px;
+    font-weight: bold;
   }
 }
