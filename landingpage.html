@@ -13,30 +13,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const navOverlay = document.querySelector(".nav-overlay");
-      const navLinks = document.querySelectorAll(".nav-links a");
-
-      function closeNavigation() {
-        document.body.classList.remove("nav-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      }
-
-      navToggle.addEventListener("click", () => {
-        const isOpen = document.body.classList.toggle("nav-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      navOverlay.addEventListener("click", closeNavigation);
-      navLinks.forEach((link) =>
-        link.addEventListener("click", closeNavigation)
-      );
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeNavigation();
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -207,7 +183,6 @@
           </div>
           <div class="reviews-card">
             <h3>Reviews</h3>
-
             <div class="reviews-content">
               <div class="reviews-avatars">
                 <div class="review-avatar">
@@ -235,6 +210,75 @@
           </div>
         </div>
       </div>
+
+      <div class="team-container">
+        <!-- DIV A -->
+        <div class="team-members">
+          <div class="team-track">
+            <div class="team-card">
+              <figure class="team-image">
+                <img src="imgs/P2.jpg" alt="Team Member" />
+              </figure>
+              <div class="team-info">
+                <p class="team-name">Anna Dias</p>
+                <p class="team-role">Property Manager</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <figure class="team-image">
+                <img src="imgs/P1.jpg" alt="Team Member" />
+              </figure>
+              <div class="team-info">
+                <p class="team-name">John Smith</p>
+                <p class="team-role">Sales Director</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <figure class="team-image">
+                <img src="imgs/P4.jpg" alt="Team Member" />
+              </figure>
+              <div class="team-info">
+                <p class="team-name">Sarah Wilson</p>
+                <p class="team-role">Property Agent</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <figure class="team-image">
+                <img src="imgs/P3.jpg" alt="Team Member" />
+              </figure>
+              <div class="team-info">
+                <p class="team-name">Michael Brown</p>
+                <p class="team-role">Consultant</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <figure class="team-image">
+                <img src="imgs/P5.jpg" alt="Team Member" />
+              </figure>
+              <div class="team-info">
+                <p class="team-name">Emma Taylor</p>
+                <p class="team-role">Real Estate Expert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DIV B -->
+        <div class="team-content">
+          <h2>Meet Our Expert Team</h2>
+
+          <p>
+            Our team of experienced professionals is committed to helping you
+            find the perfect home or investment property.
+          </p>
+
+          <button class="team-btn">View All</button>
+        </div>
+      </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
