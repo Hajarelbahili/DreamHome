@@ -670,7 +670,7 @@ h2 {
   line-height: 0.9;
 }
 .galerie {
-  background-color: #f5b9b9;
+  /* background-color: #f5b9b9;*/
   padding: 48px 60px;
   position: relative;
   height: 450px;
