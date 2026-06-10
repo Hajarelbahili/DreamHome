@@ -709,6 +709,81 @@ h2 {
   font-size: 14px;
   font-weight: bold;
 }
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 60px 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 40px;
+}
+
+.footer-brand {
+  max-width: 350px;
+}
+.footer-brand h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  color: #b5b5b5;
+  line-height: 1.7;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #b5b5b5;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contact a {
+  color: #b5b5b5;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+.footer-contact a:hover {
+  color: hsl(0, 0%, 100%);
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.footer-bottom p {
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
 @media (max-width: 1286px) {
   .about-container {
     padding: 48px 70px;
@@ -894,5 +969,19 @@ h2 {
   .galerie-info p {
     font-size: 10px;
     font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 60px 24px 24px;
+    }
+
+    .footer-top {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      max-width: 100%;
+    }
   }
 }

@@ -18,6 +18,7 @@ navLinks.forEach((link) => link.addEventListener("click", closeNavigation));
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeNavigation();
 });
+
 /*// Infinite Auto-Scrolling Carousel*/
 const track = document.querySelector(".team-track");
 
@@ -39,6 +40,7 @@ function slide() {
 }
 
 slide();
+
 /** Infinite Auto-Scrolling Carousel */
 const cards = document.querySelectorAll(".galerie-card");
 
